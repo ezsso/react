@@ -1,0 +1,23 @@
+{
+  "name": "@ezsso/react",
+  "version": "0.0.1",
+  "description": "EZ SSO React Components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezsso/react.git"
+  },
+  "author": "Max Fortun <max@maxf.net>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint index.js lib/",
+    "release": "git tag | grep -q $npm_package_version && echo \"Release $npm_package_version already exists.\" || ( ( git diff-index --quiet HEAD || git commit -a -m \"Releasing $npm_package_version\" ) && git push && git tag $npm_package_version && git push --tags;)"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
+}
